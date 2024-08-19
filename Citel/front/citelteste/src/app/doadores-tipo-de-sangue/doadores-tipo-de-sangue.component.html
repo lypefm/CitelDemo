@@ -1,0 +1,22 @@
+<div class="container mt-5">
+    <h2 class="mb-4 text-center text-primary">Possiveis doadores por tipo de sangue</h2>
+    <div class="table-responsive">
+      <table class="table table-striped table-bordered table-sm">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">Tipo de Sangue</th>
+            <th scope="col">Quantidade de possiveis doadores</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let dado of dadosDoadores">
+                <td class="fw-bold">{{ dado[0] }}</td>
+                <td>{{ dado[1] | number: '1.0-0' }}</td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="text-center mt-4">
+        <button class="btn btn-primary" (click)="goBack()">Voltar</button>
+    </div>
+</div>

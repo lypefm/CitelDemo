@@ -1,0 +1,22 @@
+<div class="container mt-5">
+    <h2 class="mb-4 text-center text-primary">Imc Médio por Faixa Etária</h2>
+    <div class="table-responsive">
+      <table class="table table-striped table-bordered table-sm">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">Faixa Etaria</th>
+            <th scope="col">IMC Médio</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let dado of dadosFaixaEtaria">
+                <td class="fw-bold">{{ dado[0] }}</td>
+                <td>{{ dado[1] | number: '1.2-2' }}</td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="text-center mt-4">
+        <button class="btn btn-primary" (click)="goBack()">Voltar</button>
+      </div>
+</div>
